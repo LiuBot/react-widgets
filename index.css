@@ -134,8 +134,9 @@ ul {
 }
 
 .clock-box{
-  background:url("https://media.giphy.com/media/3o7abKJnlA3n2YqHe0/giphy.gif");
-  background-size:530px;
+  background:url("https://media.giphy.com/media/xT1XGLSb5E1VjIUw4E/giphy.gif");
+  background-size:160px;
+  background-repeat:no-repeat;
 }
 
 .clock-row{
@@ -149,10 +150,8 @@ ul {
 .clock-row span{
   font-size:3.3vmax;
   opacity:1;
-  color:white;
+  color:black;
   font-weight:700;
-    text-shadow: 0px 4px 1px black;
-
 }
 
 
