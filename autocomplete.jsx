@@ -31,15 +31,19 @@ class Autocomplete extends React.Component{
 					value={this.state.search}
 					placeholder="Search languages..."
 					onChange={this.filterNames.bind(this)} />
-					
-				<ul className="col-1 results">
+				<ul className="results col-1">
+					<ReactCSSTransitionGroup
+						transitionName="auto"
+						transitionEnterTimeout={500}
+						transitionLeaveTimeout={500}
+					>
 				{
 					this.state.filteredNames.map((name, i) => (
 					<li key={i}>{name}</li>
 						))
 				}
+				</ReactCSSTransitionGroup>
 				</ul>
-
 				</div>
 			</div>
 			)

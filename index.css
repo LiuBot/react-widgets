@@ -8,7 +8,6 @@ section, p, footer, small {
   color: inherit;
   text-align: inherit;
   text-decoration: inherit;
-  vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
   cursor:inherit;
@@ -55,7 +54,7 @@ ul {
   font-family: 'Roboto', sans-serif;
 }
 
-.col-1-4, .col-1{
+.col-1-4, .col-1-2, .col-1{
   float:left;
 }
 
@@ -177,25 +176,28 @@ ul {
 
 .auto-box{
   display:flex;
+  margin: 0 auto;
   height:300px;
   background:url("http://66.media.tumblr.com/90920da52e2d73c92a16e5d1c7c96880/tumblr_nmydmqOiZL1un92slo1_500.jpg");
   background-size: 100%;
   background-position: center center;
   overflow:hidden;
-
 }
 
 .search-bar{
-  margin: 0 auto;
+  margin: 10px auto;
   outline: none;
   height:40px;
   padding:10px;
   font-size:20px;
   color:black;
-  opacity:0.8;
+  opacity:0.7;
 }
 
 .results{
+  display:relative;
+  left:50%;
+  top:0%;
   text-align:center;
   color:black;
 }
@@ -205,23 +207,19 @@ ul {
 
 /* TRANSITIONS */
  .auto-enter {
-   opacity: 0.01;
-   transform: translateY(500%);
- }
+  opacity: 0.01;
+}
 
- .auto-enter.auto-enter-active {
-   opacity: 1;
-   transform: translateY(0);
-   transition: opacity 500ms, transform 500ms;
- }
+.auto-enter.auto-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
 
- .auto-leave {
-   opacity: 1;
-   transform: translateY(0);
- }
+.auto-leave {
+  opacity: 1;
+}
 
- .auto-leave.auto-leave-active {
-   opacity: 0.01;
-   transform: translateY(500%);
-   transition: opacity 500ms, transform 500ms;
- }
+.auto-leave.auto-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
