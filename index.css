@@ -3,7 +3,6 @@ nav, h1, a, ul, li, main,
 section, p, footer, small {
   margin: 0;
   padding: 0;
-  border: inherit;
   outline: none;
   font-family: inherit;
   color: inherit;
@@ -86,7 +85,7 @@ ul {
   border: 4px solid black;
   border-top-left-radius:10px;
   border-top-right-radius:10px;
-  background: lightblue;
+  background: aquamarine;
   cursor:pointer;
   padding:5px 10px;
   padding:5px 10px;
@@ -105,9 +104,9 @@ ul {
 .tab-content{
   font-size:20px;
   display:flex;
-  background: url("http://static.tumblr.com/20254000a4aac6ae8c6f3125bc3ebde3/ohaukx2/ZACo9jp1p/tumblr_static_7b1ncq5j9l44wooc88w8cso8c.png");
-  height: 169px;
-  background-size: 150px;
+  background: url("http://67.media.tumblr.com/6a6bd85276e8cddb80a0b8dc3df71ddb/tumblr_ncositS7Uq1qjsbmxo1_1280.jpg");
+  height:170px;
+  background-size: 450px;
   background-repeat: no-repeat;
   border-right:4px solid black;
   border-left:4px solid black;
@@ -125,7 +124,7 @@ ul {
 /* CLOCK */
 
 
-.clock-box, .weather-box{
+.auto-box,.clock-box, .weather-box{
   font-family: 'Roboto', sans-serif;
   height:180px;
   margin:0 auto;
@@ -158,7 +157,6 @@ ul {
 
 
 
-
 /* WEATHER */
 .weather-box{
   display:flex;
@@ -175,3 +173,30 @@ ul {
   color:white;
   display:block;
 }
+
+/* AUTOCOMPLETE */
+
+.auto-box{
+  display:flex;
+  height:300px;
+  background:url("http://66.media.tumblr.com/90920da52e2d73c92a16e5d1c7c96880/tumblr_nmydmqOiZL1un92slo1_500.jpg");
+  background-size: 100%;
+  background-position: center center;
+
+}
+
+.search-bar{
+  margin: 0 auto;
+  outline: none;
+  height:40px;
+  padding:10px;
+  font-size:20px;
+  color:black;
+  opacity:0.8;
+}
+
+.results{
+  text-align:center;
+  color:black;
+}
+

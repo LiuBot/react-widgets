@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Tabs from './tabs';
 import Weather from './weather';
 import Clock from "./clock";
-import Autocomplete from "./autocomplete";
+import Autocomplete from './autocomplete';
 
 document.addEventListener("DOMContentLoaded", () => {
 	const root = document.getElementById("root");
@@ -28,11 +28,13 @@ const names = [
 	'swift'
 	];
 
+
+// pass names to Autocomplete and tabs to Tabs
 ReactDOM.render(
 	<div>
 	<Clock />
 	<Weather />
-	<Autocomplete />
+	<Autocomplete names={names}/>
 	<Tabs tabs={tabs} />
 	</div>,
 	root);

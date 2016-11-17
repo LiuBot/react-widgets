@@ -1,43 +1,47 @@
-
 import React from 'react';
 
-class AutoComplete extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {search: "", filteredNames: this.props.names};
-  }
+class Autocomplete extends React.Component{
+	constructor(props){
+		super(props);
 
-  filterNames(e) {
-    let search = e.currentTarget.value;
+		this.state= {search: "", filteredNames: this.props.names};
+	}
 
 
-    let filteredNames = this.props.names.filter(name => {
-      name = name.toLowerCase();
-      return name.indexOf(search) === 0;
-    });
+	filterNames(event){
+		let search = event.currentTarget.value; 
 
-    this.setState({search, filteredNames});
-  }
+		let filteredNames = this.props.names.filter( name =>{
+			name = name.toLowerCase();
+				return (name.indexOf(search) === 0);
+		});
 
-  render() {
-    return (
-      <div className="widget col-1-2">
-        <h2>AutoComplete</h2>
-        <div className="autocomplete-box">
-          <input type="text"
-                 value={this.state.search}
-                 onChange={this.filterNames.bind(this)} />
-          <ul>
-            {
-              this.state.filteredNames.map((name, i) => (
-                <li key={i}>{name}</li>
-              ))
-            }
-          </ul>
-        </div>
-      </div>
-    );
-  }
+		this.setState({search, filteredNames})
+	}
+
+	render(){
+
+		return(
+			<div className="widget col-1-4">
+				<h1>Autocomplete</h1>
+				<div className="auto-box col-1">
+				<input type="text"
+					className="search-bar"
+					value={this.state.search}
+					placeholder="Search languages..."
+					onChange={this.filterNames.bind(this)} />
+				<ul className="col-1 results">
+				{
+					this.state.filteredNames.map((name, i) => (
+					<li key={i}>{name}</li>
+						))
+				}
+				</ul>
+
+				</div>
+			</div>
+			)
+	}
 }
 
-export default AutoComplete;
+export default Autocomplete;
