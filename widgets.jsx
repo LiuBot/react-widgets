@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Tabs from './tabs';
+import Weather from './weather';
 
 document.addEventListener("DOMContentLoaded", () => {
 	const root = document.getElementById("root");
