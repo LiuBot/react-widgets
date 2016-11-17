@@ -181,6 +181,7 @@ ul {
   background:url("http://66.media.tumblr.com/90920da52e2d73c92a16e5d1c7c96880/tumblr_nmydmqOiZL1un92slo1_500.jpg");
   background-size: 100%;
   background-position: center center;
+  overflow:hidden;
 
 }
 
@@ -199,3 +200,28 @@ ul {
   color:black;
 }
 
+
+
+
+/* TRANSITIONS */
+ .auto-enter {
+   opacity: 0.01;
+   transform: translateY(500%);
+ }
+
+ .auto-enter.auto-enter-active {
+   opacity: 1;
+   transform: translateY(0);
+   transition: opacity 500ms, transform 500ms;
+ }
+
+ .auto-leave {
+   opacity: 1;
+   transform: translateY(0);
+ }
+
+ .auto-leave.auto-leave-active {
+   opacity: 0.01;
+   transform: translateY(500%);
+   transition: opacity 500ms, transform 500ms;
+ }

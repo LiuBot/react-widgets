@@ -1,4 +1,5 @@
 import React from 'react';
+const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 class Autocomplete extends React.Component{
 	constructor(props){
@@ -30,6 +31,7 @@ class Autocomplete extends React.Component{
 					value={this.state.search}
 					placeholder="Search languages..."
 					onChange={this.filterNames.bind(this)} />
+					
 				<ul className="col-1 results">
 				{
 					this.state.filteredNames.map((name, i) => (
