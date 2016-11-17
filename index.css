@@ -1,0 +1,111 @@
+html, head, body, header,
+nav, h1, a, ul, li, main,
+section, p, footer, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-family:arial;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  cursor:inherit;
+}
+
+h1{
+  font-size:30px;
+  font-weight:bold;
+  text-align: center;
+}
+
+h2{
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:20px;
+  text-align: center;
+}
+
+header, nav, main, section,
+footer, small {
+  display: block;
+}
+
+button {
+  outline: none;
+}
+
+
+ul {
+  list-style: none;
+}
+
+/* Clearfix */
+
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.widget{
+  margin:20px 20px;
+}
+
+.col-1-4, .col-1{
+  float:left;
+}
+
+.col-1-4{
+  width:25%;
+}
+
+.col-1{
+  width:100%;
+  margin: 0 20px;
+}
+
+/*      ///////////////////////// */
+
+.tab-list {
+  margin: auto;
+  display: flex;
+}
+
+.tab-list li{
+  float:left;
+  border: 2px solid black;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  background: lightblue;
+  cursor:pointer;
+  padding:5px 10px;
+  padding:5px 10px;
+  flex-grow: 1; /* display flex*/
+}
+
+.tab-list li h2{
+  text-align:center;
+}
+
+.tab-list li:hover{
+  background: black;
+  color:white;
+}
+
+.tab-content{
+  font-size:20px;
+  display:flex;
+  background: url("http://static.tumblr.com/20254000a4aac6ae8c6f3125bc3ebde3/ohaukx2/ZACo9jp1p/tumblr_static_7b1ncq5j9l44wooc88w8cso8c.png");
+  height: 169px;
+  background-size: 150px;
+  /*background-repeat: no-repeat;*/
+  border-right:1px solid black;
+  border-left:1px solid black;
+  border-bottom:1px solid black;
+  align-items: center;
+  justify-content: center;
+}

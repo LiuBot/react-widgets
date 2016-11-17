@@ -31,22 +31,23 @@ class Tabs extends React.Component{
 //In the render method of Tabs, render a collection of <h1>s (with titles)
 // in a <ul> and the content of the selected tab in an <article>.
 		return(
-			<div>
+			<div className='widget col-1-4'>
 
-				<div>
+				<div className='col-1 cf'>
 				<h1>Tabs</h1>
-				<ul>
+				<ul className='tab-list cf'>
 				{tabs.map((tab, i) =>(
 						<li onClick={this.updateSelectedTab.bind(this, i)} 
-						key={tab.label}><h1>{tab.label}</h1></li>
+						//Add a click handler to each li that updates the selected index in the Tabs component.
+						key={tab.label}><h2>{tab.label}</h2></li>
 					)) 
 				}
 				</ul>
 				</div>
 
-				<div>
-					<article>
-					{tabs[selectedTab].content}
+				<div className="col-1">
+					<article className="tab-content">
+					<p>{tabs[selectedTab].content}</p>
 					</article>
 				</div>
 
