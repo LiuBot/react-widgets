@@ -1,14 +1,4 @@
-// Make a Tabs component. Root should pass Tabs an 
-// array of Javascript objects (the data for the 
-// tabs) that have title and content as keys. 
 
-// Display all the titles, but have the selected 
-// title in bold font. 
-
-// Below, it should display only 
-// the contents of the selected tab. The content 
-// pane should update when the user selects 
-// different headers.
 import React from 'react';
 
 

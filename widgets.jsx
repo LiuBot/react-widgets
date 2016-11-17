@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Tabs from './tabs';
-import Weather from './weather';
+// import Weather from './weather';
+import Clock from "./clock";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const root = document.getElementById("root");
@@ -14,6 +15,9 @@ const tabs = [
 ];
 
 ReactDOM.render(
-	<Tabs tabs={tabs} />, 
+	<div>
+	<Clock />
+	<Tabs tabs={tabs} />
+	</div>,
 	root);
 });
